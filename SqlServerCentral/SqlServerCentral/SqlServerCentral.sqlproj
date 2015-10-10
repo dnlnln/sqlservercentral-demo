@@ -31,7 +31,11 @@
     <PostDeploymentSubFolder>Post-Deployment</PostDeploymentSubFolder>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <ExcludeObjectsFromSync />
-    <IncludeObjectsInDataSync />
+    <IncludeObjectsInDataSync>
+Table=[dbo].[EmailerConfiguration];
+Table=[dbo].[MailboxMonitorConfiguration];
+Table=[dbo].[SearchAnalyzerConfig];
+</IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
@@ -171,5 +175,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Migrations\0001_20151010-1736_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0002_20151010-1740_daner.sql" />
   </ItemGroup>
 </Project>
