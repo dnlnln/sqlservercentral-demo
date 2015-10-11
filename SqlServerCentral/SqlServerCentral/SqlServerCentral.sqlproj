@@ -248,7 +248,6 @@ Table=[dbo].[UtilitiesLog];
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
-    <None Include="SqlServerCentral.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
@@ -451,9 +450,6 @@ Table=[dbo].[UtilitiesLog];
   </ItemGroup>
   <ItemGroup>
     <None Include="Migrations\1.1.0-NewFeatures\0010_20151011-1625_daner.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="0006_20151011-1544_daner.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Migrations\1.2.0-VariableDemo\001_20151011-1658_daner.sql" />
