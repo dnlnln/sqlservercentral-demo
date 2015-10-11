@@ -39,6 +39,7 @@ Table=[dbo].[SearchAnalyzerConfig];
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
     <GenerateOctopusNuPkg>True</GenerateOctopusNuPkg>
+    <SyncToOfflineSchemaModel>True</SyncToOfflineSchemaModel>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -172,6 +173,12 @@ Table=[dbo].[SearchAnalyzerConfig];
     <Folder Include="Programmable Objects\Functions\" />
     <Folder Include="Programmable Objects\Stored Procedures\" />
     <Folder Include="Programmable Objects\Views\" />
+    <Folder Include="Schema-Model\" />
+    <Folder Include="Schema-Model\Assemblies\" />
+    <Folder Include="Schema-Model\Security\" />
+    <Folder Include="Schema-Model\Security\Roles\" />
+    <Folder Include="Schema-Model\Security\Users\" />
+    <Folder Include="Schema-Model\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
@@ -273,5 +280,104 @@ Table=[dbo].[SearchAnalyzerConfig];
     <None Include="Programmable Objects\Views\dbo.vw_EmailsWithRecipientCounts.sql" />
     <None Include="Programmable Objects\Views\dbo.vw_SampleContentItems.sql" />
     <None Include="Programmable Objects\Views\dbo.WidgetPriceList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schema-Model\Assemblies\SQLHtmlParser.sql" />
+    <None Include="Schema-Model\Security\Roles\db_datareader.sql" />
+    <None Include="Schema-Model\Security\Roles\db_datawriter.sql" />
+    <None Include="Schema-Model\Security\Roles\db_ddladmin.sql" />
+    <None Include="Schema-Model\Security\Roles\db_executor.sql" />
+    <None Include="Schema-Model\Security\Roles\db_owner.sql" />
+    <None Include="Schema-Model\Security\Roles\db_securityadmin.sql" />
+    <None Include="Schema-Model\Security\Roles\Emailer.sql" />
+    <None Include="Schema-Model\Security\Roles\ssc_webapplication.sql" />
+    <None Include="Schema-Model\Security\Users\chris.massey.sql" />
+    <None Include="Schema-Model\Security\Users\CommunityServer.sql" />
+    <None Include="Schema-Model\Security\Users\DataMigrator_user.sql" />
+    <None Include="Schema-Model\Security\Users\dave.convery.sql" />
+    <None Include="Schema-Model\Security\Users\ForumsUser.sql" />
+    <None Include="Schema-Model\Security\Users\jess.nickson.sql" />
+    <None Include="Schema-Model\Security\Users\melanie.townsend.sql" />
+    <None Include="Schema-Model\Security\Users\Michael.Williamson.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer3.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer4.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer5.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer6.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_rssimporter.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_searchindexer.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_update.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_web.sql" />
+    <None Include="Schema-Model\Tables\dbo.Adverts.sql" />
+    <None Include="Schema-Model\Tables\dbo.AnalysisLog.sql" />
+    <None Include="Schema-Model\Tables\dbo.Answers.sql" />
+    <None Include="Schema-Model\Tables\dbo.Articles.sql" />
+    <None Include="Schema-Model\Tables\dbo.ArticleSeries.sql" />
+    <None Include="Schema-Model\Tables\dbo.AuthorContentItem.sql" />
+    <None Include="Schema-Model\Tables\dbo.AuthorScheduleNotificationsLog.sql" />
+    <None Include="Schema-Model\Tables\dbo.BadEmailAddresses.sql" />
+    <None Include="Schema-Model\Tables\dbo.BlogPosts.sql" />
+    <None Include="Schema-Model\Tables\dbo.Blogs.sql" />
+    <None Include="Schema-Model\Tables\dbo.BriefcaseEntries.sql" />
+    <None Include="Schema-Model\Tables\dbo.BriefcaseEntryTags.sql" />
+    <None Include="Schema-Model\Tables\dbo.ClickTrackingClicks.sql" />
+    <None Include="Schema-Model\Tables\dbo.ClickTrackingURLs.sql" />
+    <None Include="Schema-Model\Tables\dbo.CommunityServerBlogOwners.sql" />
+    <None Include="Schema-Model\Tables\dbo.CommunityServerBlogPosts.sql" />
+    <None Include="Schema-Model\Tables\dbo.CommunityServerBlogs.sql" />
+    <None Include="Schema-Model\Tables\dbo.Contacts.sql" />
+    <None Include="Schema-Model\Tables\dbo.ContentItemRatings.sql" />
+    <None Include="Schema-Model\Tables\dbo.ContentItems.sql" />
+    <None Include="Schema-Model\Tables\dbo.ContentItemsScheduledRelease.sql" />
+    <None Include="Schema-Model\Tables\dbo.ContentPerformanceRecord.sql" />
+    <None Include="Schema-Model\Tables\dbo.DataMigrations.sql" />
+    <None Include="Schema-Model\Tables\dbo.EmailerConfiguration.sql" />
+    <None Include="Schema-Model\Tables\dbo.EmailRecipients.sql" />
+    <None Include="Schema-Model\Tables\dbo.EmailRecipientSources.sql" />
+    <None Include="Schema-Model\Tables\dbo.Emails.sql" />
+    <None Include="Schema-Model\Tables\dbo.EmailsArchive.sql" />
+    <None Include="Schema-Model\Tables\dbo.EventLog.sql" />
+    <None Include="Schema-Model\Tables\dbo.FileBlobs.sql" />
+    <None Include="Schema-Model\Tables\dbo.FileContentItems.sql" />
+    <None Include="Schema-Model\Tables\dbo.Files.sql" />
+    <None Include="Schema-Model\Tables\dbo.ForumOrder.sql" />
+    <None Include="Schema-Model\Tables\dbo.ForumTopics.sql" />
+    <None Include="Schema-Model\Tables\dbo.Fragments.sql" />
+    <None Include="Schema-Model\Tables\dbo.MailboxMonitorConfiguration.sql" />
+    <None Include="Schema-Model\Tables\dbo.NewsletterBounceForwarding.sql" />
+    <None Include="Schema-Model\Tables\dbo.NewsletterBounceLog.sql" />
+    <None Include="Schema-Model\Tables\dbo.NewsletterRecipientCounts.sql" />
+    <None Include="Schema-Model\Tables\dbo.NewsletterUnsubscribeThresholds.sql" />
+    <None Include="Schema-Model\Tables\dbo.QuestionAttempt.sql" />
+    <None Include="Schema-Model\Tables\dbo.QuestionAttemptAnswers.sql" />
+    <None Include="Schema-Model\Tables\dbo.Questions.sql" />
+    <None Include="Schema-Model\Tables\dbo.ScheduleEntries.sql" />
+    <None Include="Schema-Model\Tables\dbo.Scripts.sql" />
+    <None Include="Schema-Model\Tables\dbo.SearchAnalyzerConfig.sql" />
+    <None Include="Schema-Model\Tables\dbo.Sources.sql" />
+    <None Include="Schema-Model\Tables\dbo.StairwaySeriesArticles.sql" />
+    <None Include="Schema-Model\Tables\dbo.StaticTextFragments.sql" />
+    <None Include="Schema-Model\Tables\dbo.StatsCache_ContentItemMappingsByTag.sql" />
+    <None Include="Schema-Model\Tables\dbo.StatsCache_TagMappingsByContentItem.sql" />
+    <None Include="Schema-Model\Tables\dbo.StatsCache_UserTagMappingsByContentItem.sql" />
+    <None Include="Schema-Model\Tables\dbo.SyndicatedBlogPosts.sql" />
+    <None Include="Schema-Model\Tables\dbo.SyndicatedBlogs.sql" />
+    <None Include="Schema-Model\Tables\dbo.SyndicatedCommentCaches.sql" />
+    <None Include="Schema-Model\Tables\dbo.SyndicatedComments.sql" />
+    <None Include="Schema-Model\Tables\dbo.TagMappings.sql" />
+    <None Include="Schema-Model\Tables\dbo.Tags.sql" />
+    <None Include="Schema-Model\Tables\dbo.UserLogins.sql" />
+    <None Include="Schema-Model\Tables\dbo.UserPoints.sql" />
+    <None Include="Schema-Model\Tables\dbo.Users.sql" />
+    <None Include="Schema-Model\Tables\dbo.UserSearches.sql" />
+    <None Include="Schema-Model\Tables\dbo.UtilitiesLog.sql" />
+    <None Include="Schema-Model\Tables\dbo.WidgetDescriptions.sql" />
+    <None Include="Schema-Model\Tables\dbo.WidgetPrices.sql" />
+    <None Include="Schema-Model\Tables\dbo.WidgetPurchases.sql" />
+    <None Include="Schema-Model\Tables\dbo.WidgetReferences.sql" />
+    <None Include="Schema-Model\Tables\dbo.Widgets.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0006_20151011-1544_daner.sql" />
   </ItemGroup>
 </Project>
