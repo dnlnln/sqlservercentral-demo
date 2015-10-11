@@ -99,7 +99,7 @@ Table=[dbo].[UtilitiesLog];
 </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
-    <GenerateOctopusNuPkg>True</GenerateOctopusNuPkg>
+    <GenerateOctopusNuPkg>False</GenerateOctopusNuPkg>
     <SyncToOfflineSchemaModel>True</SyncToOfflineSchemaModel>
     <DeployOnceUseSemver>True</DeployOnceUseSemver>
     <SemverInitialBaseline>True</SemverInitialBaseline>
