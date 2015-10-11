@@ -9752,3 +9752,6 @@ GRANT UPDATE ON  [dbo].[vw_EmailsWithRecipientCounts] TO [ssc_webapplication]
 GO
 GRANT EXECUTE TO [db_executor]
 GO
+ALTER TABLE dbo.StaticTextFragments ADD
+	PublishDate datetime2(7) NOT NULL CONSTRAINT DF_StaticTextFragments_PublishDate DEFAULT sysdatetime()
+GO
