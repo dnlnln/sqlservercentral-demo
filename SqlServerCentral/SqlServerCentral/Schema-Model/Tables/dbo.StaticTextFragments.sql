@@ -3,7 +3,9 @@ CREATE TABLE [dbo].[StaticTextFragments]
 [StaticTextFragmentID] [int] NOT NULL IDENTITY(1, 1),
 [KeyText] [varchar] (50) NOT NULL,
 [StaticText] [varchar] (8000) NULL,
-[ContainsTokens] [bit] NOT NULL
+[ContainsTokens] [bit] NOT NULL,
+[CreatedDate] [datetime2] NULL CONSTRAINT [DF_StaticTextFragments_CreatedDate] DEFAULT (sysdatetime()),
+[PublishDate] [datetime2] NOT NULL
 )
 GO
 ALTER TABLE [dbo].[StaticTextFragments] ADD CONSTRAINT [PK_StaticTextFragments] PRIMARY KEY CLUSTERED  ([StaticTextFragmentID])
