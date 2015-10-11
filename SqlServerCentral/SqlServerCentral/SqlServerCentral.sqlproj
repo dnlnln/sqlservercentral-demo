@@ -452,4 +452,7 @@ Table=[dbo].[UtilitiesLog];
   <ItemGroup>
     <None Include="Migrations\0009_20151011-1623_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0010_20151011-1625_daner.sql" />
+  </ItemGroup>
 </Project>

@@ -4,8 +4,8 @@ CREATE TABLE [dbo].[StaticTextFragments]
 [KeyText] [varchar] (50) NOT NULL,
 [StaticText] [varchar] (8000) NULL,
 [ContainsTokens] [bit] NOT NULL,
+[CreatedDate] [datetime2] NOT NULL CONSTRAINT [DF_StaticTextFragments_CreatedDate] DEFAULT (sysdatetime()),
 [PublishDate] [datetime2] NOT NULL,
-[CreatedDate] [datetime2] NULL CONSTRAINT [DF_StaticTextFragments_CreatedDate] DEFAULT (sysdatetime()),
 [UpdatedDate] [datetime2] NOT NULL CONSTRAINT [DF_StaticTextFragments_UpdatedDate] DEFAULT (sysdatetime())
 )
 GO
