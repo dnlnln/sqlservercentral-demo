@@ -6,7 +6,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-CREATE PROCEDURE [dbo].[AddStopWord] @Word NVARCHAR(60)
+CREATE PROCEDURE [dbo].[AddStopWord] @Word NVARCHAR(60) -- Bobs change!
 AS
 	BEGIN
 		INSERT INTO dbo.SearchAnalyzerConfig
