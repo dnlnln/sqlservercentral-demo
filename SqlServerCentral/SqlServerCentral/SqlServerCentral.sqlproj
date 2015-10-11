@@ -38,6 +38,7 @@ Table=[dbo].[SearchAnalyzerConfig];
 </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
+    <GenerateOctopusNuPkg>True</GenerateOctopusNuPkg>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -174,6 +175,7 @@ Table=[dbo].[SearchAnalyzerConfig];
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
+    <None Include="SqlServerCentral.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
