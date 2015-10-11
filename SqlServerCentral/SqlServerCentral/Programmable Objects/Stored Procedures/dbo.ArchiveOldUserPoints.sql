@@ -27,7 +27,7 @@ BEGIN
 	SET NOCOUNT ON;
 
 	DECLARE @ArchiveMarkerDate DATETIME
-	SET @ArchiveMarkerDate = '2001-01-01'
+	SET @ArchiveMarkerDate = '2001-01-02' -- My change
 
 	-- Fix the date in case we pass midnight during processing...
 	DECLARE @ArchiveBefore DATETIME
