@@ -101,7 +101,7 @@ Table=[dbo].[UtilitiesLog];
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
     <GenerateOctopusNuPkg>True</GenerateOctopusNuPkg>
     <SyncToOfflineSchemaModel>True</SyncToOfflineSchemaModel>
-    <DeployOnceUseSemver>False</DeployOnceUseSemver>
+    <DeployOnceUseSemver>True</DeployOnceUseSemver>
     <SemverInitialBaseline>True</SemverInitialBaseline>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
@@ -242,6 +242,8 @@ Table=[dbo].[UtilitiesLog];
     <Folder Include="Schema-Model\Security\Roles\" />
     <Folder Include="Schema-Model\Security\Users\" />
     <Folder Include="Schema-Model\Tables\" />
+    <Folder Include="Migrations\1.0.0-Baseline" />
+    <Folder Include="Migrations\1.1.0-NewFeatures" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
@@ -420,39 +422,39 @@ Table=[dbo].[UtilitiesLog];
     <None Include="Schema-Model\Tables\dbo.Widgets.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0001_20151010-1736_daner.sql" />
+    <None Include="Migrations\1.0.0-Baseline\0001_20151010-1736_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0002_20151010-1740_daner.sql" />
+    <None Include="Migrations\1.0.0-Baseline\0002_20151010-1740_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0003_20151011-1445_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0003_20151011-1445_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0003_20151011-1447_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0003_20151011-1447_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0004_20151011-1510_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0004_20151011-1510_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0005_20151011-1513_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0005_20151011-1513_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0005_20151011-1515_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0005_20151011-1515_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0006_20151011-1544_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0006_20151011-1544_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0007_20151011-1612_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0007_20151011-1612_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0008_20151011-1612_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0008_20151011-1612_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0009_20151011-1623_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0009_20151011-1623_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0010_20151011-1625_daner.sql" />
+    <None Include="Migrations\1.1.0-NewFeatures\0010_20151011-1625_daner.sql" />
   </ItemGroup>
 </Project>
