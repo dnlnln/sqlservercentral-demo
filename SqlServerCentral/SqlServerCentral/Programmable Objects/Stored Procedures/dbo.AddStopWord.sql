@@ -11,7 +11,7 @@ AS
 	BEGIN
 		INSERT INTO dbo.SearchAnalyzerConfig
 		        ( Word, [Group] )
-		VALUES  ( @Word, 1 )
+		VALUES  ( @Word, 2 )
 		
 		
 		SELECT @@ERROR AS 'atatError'
