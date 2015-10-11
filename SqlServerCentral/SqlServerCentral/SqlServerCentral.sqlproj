@@ -443,12 +443,6 @@ Table=[dbo].[UtilitiesLog];
     <None Include="Migrations\1.1.0-NewFeatures\0005_20151011-1515_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\1.1.0-NewFeatures\0006_20151011-1544_daner.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Migrations\1.1.0-NewFeatures\0007_20151011-1612_daner.sql" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Migrations\1.1.0-NewFeatures\0008_20151011-1612_daner.sql" />
   </ItemGroup>
   <ItemGroup>
@@ -456,5 +450,8 @@ Table=[dbo].[UtilitiesLog];
   </ItemGroup>
   <ItemGroup>
     <None Include="Migrations\1.1.0-NewFeatures\0010_20151011-1625_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="0006_20151011-1544_daner.sql" />
   </ItemGroup>
 </Project>

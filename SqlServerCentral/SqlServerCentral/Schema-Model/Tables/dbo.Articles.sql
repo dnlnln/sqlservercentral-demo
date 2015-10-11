@@ -2,7 +2,8 @@ CREATE TABLE [dbo].[Articles]
 (
 [ContentItemID] [int] NOT NULL,
 [LoginRequired] [bit] NOT NULL CONSTRAINT [DF__Articles__LoginR__2334397B] DEFAULT ((1)),
-[PublishDate] [datetime2] NOT NULL
+[CreatedDate] [datetime2] NOT NULL CONSTRAINT [DF_Articles_CreatedDate] DEFAULT (sysdatetime()),
+[UpdatedDate] [datetime2] NOT NULL CONSTRAINT [DF_Articles_UpdatedDate] DEFAULT (sysdatetime())
 )
 GO
 ALTER TABLE [dbo].[Articles] ADD CONSTRAINT [PK_Articles] PRIMARY KEY CLUSTERED  ([ContentItemID])

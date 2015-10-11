@@ -14,5 +14,6 @@ GO
 ALTER TABLE [dbo].[Articles] DROP
 COLUMN [UpdatedDate]
 GO
-EXEC sp_rename N'[dbo].[Articles].[CreatedDate]', N'PublishDate', N'COLUMN'
+ALTER TABLE [dbo].[Articles] DROP
+COLUMN [CreatedDate]
 GO
