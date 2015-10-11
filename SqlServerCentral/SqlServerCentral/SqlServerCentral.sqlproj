@@ -185,4 +185,7 @@ Table=[dbo].[SearchAnalyzerConfig];
   <ItemGroup>
     <None Include="Migrations\0003_20151011-1447_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0004_20151011-1510_daner.sql" />
+  </ItemGroup>
 </Project>
