@@ -9,7 +9,7 @@ GO
 CREATE PROCEDURE [dbo].[ArchiveOldUserPoints] 
 	@ArchiveThresholdDays int = 50 -- Bob's change
 AS
-BEGIN
+BEGIN -- Dan's change
 	-- To prevent the UserPoints table getting too large, we only retain daily
 	-- totals for the last 40 days. Older points are stored in a single (per-user-category-pair)
 	-- archive record dated 2001-01-01. More specifically:
