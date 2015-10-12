@@ -30,7 +30,7 @@ BEGIN -- Dan's change
 	SET @ArchiveMarkerDate = '2001-01-02' -- Dan's change
 
 	-- Fix the date in case we pass midnight during processing...
-	DECLARE @ArchiveBefore DATETIME
+	DECLARE @ArchiveBefore DATETIME -- Bob's change
 	SELECT @ArchiveBefore = DATEADD(DAY, -1*@ArchiveThresholdDays, GETDATE()) 
 
     BEGIN TRAN
