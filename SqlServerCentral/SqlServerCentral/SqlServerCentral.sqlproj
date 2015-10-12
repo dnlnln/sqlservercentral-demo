@@ -36,6 +36,7 @@ Table=[dbo].[EmailerConfiguration];
 </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
+    <DeployOnceUseSemver>True</DeployOnceUseSemver>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -169,21 +170,14 @@ Table=[dbo].[EmailerConfiguration];
     <Folder Include="Programmable Objects\Functions\" />
     <Folder Include="Programmable Objects\Stored Procedures\" />
     <Folder Include="Programmable Objects\Views\" />
+    <Folder Include="Migrations\1.0.0-CurrentProductionBaseline" />
+    <Folder Include="Migrations\1.1.0-Feature1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Migrations\0001_20151012-1123_daner.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Migrations\0002_20151012-1123_daner.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Migrations\0003_EmailerConfiguration_CreatedDate.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Programmable Objects\Functions\dbo.ExtractWordsFromHTML.sql" />
@@ -257,5 +251,14 @@ Table=[dbo].[EmailerConfiguration];
     <None Include="Programmable Objects\Views\dbo.vw_EmailsWithRecipientCounts.sql" />
     <None Include="Programmable Objects\Views\dbo.vw_SampleContentItems.sql" />
     <None Include="Programmable Objects\Views\dbo.WidgetPriceList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\1.1.0-Feature1\0003_EmailerConfiguration_CreatedDate.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\1.0.0-CurrentProductionBaseline\0001_20151012-1123_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\1.0.0-CurrentProductionBaseline\0002_20151012-1123_daner.sql" />
   </ItemGroup>
 </Project>
