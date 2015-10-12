@@ -1,4 +1,4 @@
-﻿-- <Migration ID="5bef099f-1768-4de8-84aa-3a1d6b75d7f8" />
+﻿-- <Migration ID="7e687aad-7fd2-48b8-97e5-e3ddd4bc2abb" />
 GO
 
 CREATE USER [CommunityServer] WITHOUT LOGIN
@@ -7085,7 +7085,8 @@ CREATE TABLE [dbo].[EmailerConfiguration]
 [ComputerName] [nvarchar] (100) NOT NULL,
 [Active] [bit] NOT NULL,
 [BatchSize] [int] NOT NULL,
-[Priority] [int] NOT NULL
+[Priority] [int] NOT NULL,
+[LastModifiedDate] [datetime2] NULL
 )
 GO
 PRINT N'Creating primary key [PK_EmailerConfiguration] on [dbo].[EmailerConfiguration]'
@@ -8112,8 +8113,7 @@ CREATE TABLE [dbo].[StaticTextFragments]
 [StaticTextFragmentID] [int] NOT NULL IDENTITY(1, 1),
 [KeyText] [varchar] (50) NOT NULL,
 [StaticText] [varchar] (8000) NULL,
-[ContainsTokens] [bit] NOT NULL,
-[PublishDate] [datetime2] NOT NULL
+[ContainsTokens] [bit] NOT NULL
 )
 GO
 PRINT N'Creating primary key [PK_StaticTextFragments] on [dbo].[StaticTextFragments]'

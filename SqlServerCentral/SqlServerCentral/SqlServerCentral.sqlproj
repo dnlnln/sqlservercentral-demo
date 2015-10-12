@@ -33,8 +33,6 @@
     <ExcludeObjectsFromSync />
     <IncludeObjectsInDataSync>
 Table=[dbo].[EmailerConfiguration];
-Table=[dbo].[MailboxMonitorConfiguration];
-Table=[dbo].[SearchAnalyzerConfig];
 </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
   </PropertyGroup>
@@ -174,12 +172,9 @@ Table=[dbo].[SearchAnalyzerConfig];
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0001_20151012-1057_daner.sql" />
+    <None Include="Migrations\0001_20151012-1123_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0002_20151012-1059_daner.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Migrations\0003_20151012-1104_daner.sql" />
+    <None Include="Migrations\0002_20151012-1123_daner.sql" />
   </ItemGroup>
 </Project>
