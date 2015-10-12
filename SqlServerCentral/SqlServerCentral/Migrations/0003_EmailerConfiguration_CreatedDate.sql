@@ -1,6 +1,8 @@
 ﻿-- <Migration ID="ff53dca3-b0a5-4d15-b67b-cc258e0c0b47" />
 GO
 
+-- 0003_EmailerConfiguration_CreatedDate.sql
+
 PRINT N'Adding [dbo].[EmailerConfiguration].[CreatedDate] column (empty)'
 GO
 ALTER TABLE [dbo].[EmailerConfiguration] 
