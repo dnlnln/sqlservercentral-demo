@@ -31,7 +31,7 @@ BEGIN
 
 	-- Fix the date in case we pass midnight during processing...
 	DECLARE @ArchiveBefore DATETIME
-	SELECT @ArchiveBefore = DATEADD(DAY, -1*@ArchiveThresholdDays, GETDATE()) 
+	SELECT @ArchiveBefore = DATEADD(DAY, -1*@ArchiveThresholdDays, GETDATE()) -- Jim's change
 
     BEGIN TRAN
 		-- Make sure there's at least a blank (zero) archive record for everyone who's scored points recently in each category
