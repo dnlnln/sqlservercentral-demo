@@ -32,8 +32,7 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <ExcludeObjectsFromSync />
     <IncludeObjectsInDataSync>
-Table=[dbo].[EmailerConfiguration];
-</IncludeObjectsInDataSync>
+    </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
@@ -176,5 +175,8 @@ Table=[dbo].[EmailerConfiguration];
   </ItemGroup>
   <ItemGroup>
     <None Include="Migrations\0002_20151024-1350_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0003_20151024-1412_daner.sql" />
   </ItemGroup>
 </Project>
