@@ -24,7 +24,7 @@ BEGIN
 	--
 	-- What's left are the recent entries, and the one-per-user-category archive record
 
-	SET NOCOUNT ON;
+	SET NOCOUNT OFF; -- Bob's change
 
 	DECLARE @ArchiveMarkerDate DATETIME
 	SET @ArchiveMarkerDate = '2001-01-02' -- Jim's change
