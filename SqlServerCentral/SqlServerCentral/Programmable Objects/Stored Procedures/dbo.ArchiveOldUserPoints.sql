@@ -7,7 +7,7 @@ GO
 SET ANSI_NULLS ON
 GO
 CREATE PROCEDURE [dbo].[ArchiveOldUserPoints] 
-	@ArchiveThresholdDays int = 40
+	@ArchiveThresholdDays int = 50 -- Jim's change
 AS
 BEGIN
 	-- To prevent the UserPoints table getting too large, we only retain daily
