@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SqlServerCentral</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ee92457d-7cad-4f9c-81f8-e828918d1bc1}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SqlServerCentral</RootNamespace>
+    <AssemblyName>SqlServerCentral</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+    <IsReadyRollProject>True</IsReadyRollProject>
+    <ReadyRollToolsVersion>1.12</ReadyRollToolsVersion>
+    <DeployOnceSubFolder>Migrations</DeployOnceSubFolder>
+    <DeployChangesSubFolder>Programmable Objects</DeployChangesSubFolder>
+    <PreDeploymentSubFolder>Pre-Deployment</PreDeploymentSubFolder>
+    <PostDeploymentSubFolder>Post-Deployment</PostDeploymentSubFolder>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <ExcludeObjectsFromSync />
+    <IncludeObjectsInDataSync>
+Table=[dbo].[EmailerConfiguration];
+</IncludeObjectsInDataSync>
+    <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
+    <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
+  </PropertyGroup>
+  <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
+  <PropertyGroup>
+    <!--
+    <SyncToOfflineSchemaModel>True</SyncToOfflineSchemaModel>
+    <SyncToOfflineSchemaModelBySchema>False</SyncToOfflineSchemaModelBySchema>
+    <SyncToOfflineSchemaModelObjectTypes>Table;Assembly;Contract;Credential;Default;EventNotification;FileGroup;FullTextCatalog;FullTextIndex;FullTextIndexColumn;FullTextStopList;FullTextStopListStopWord;MessageType;PartitionFunction;PartitionScheme;Queue;RemoteServiceBinding;Role;Route;Rule;Schema;SearchPropertyList;Sequence;Service;Synonym;Users;UserDefinedDataType;XmlSchemaCollection</SyncToOfflineSchemaModelObjectTypes>
+    <SchemaModelSubFolder>Schema-Model</SchemaModelSubFolder>
+    -->
+  </PropertyGroup>
+  <!-- READYROLL DEPLOY-CHANGE MIGRATION OPTIONS -->
+  <PropertyGroup>
+    <!--
+    <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
+    <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
+    <SyncToOfflineSchemaModelBySchema>False</SyncToOfflineSchemaModelBySchema>
+    <DeployChangesImportObjectTypes>StoredProcedure;UserDefinedFunction;View;Trigger;DatabaseDdlTrigger</DeployChangesImportObjectTypes>
+    <DeployChangesSubFolder>Deploy-Changes</DeployChangesSubFolder>
+    -->
+  </PropertyGroup>
+  <!-- READYROLL SCRIPT GENERATION OPTIONS -->
+  <PropertyGroup>
+    <!-- These properties might be set by the Developer -->
+    <!--
+    <SyncOptionIncludeDependentObjects>False</SyncOptionIncludeDependentObjects>
+    <SyncOptionIncludeExistenceChecks>False</SyncOptionIncludeExistenceChecks>
+    <SyncOptionUseDropCreateInsteadOfAlter>False</SyncOptionUseDropCreateInsteadOfAlter>
+    <SyncOptionDisableDdlTriggers>True</SyncOptionDisableDdlTriggers>
+    
+    <SyncOptionIgnoreExtendedProperties>False</SyncOptionIgnoreExtendedProperties>
+    <SyncOptionIgnoreCommentsInBodies>False</SyncOptionIgnoreCommentsInBodies>
+    <SyncOptionIgnoreAnsiOptions>False</SyncOptionIgnoreAnsiOptions>
+    <SyncOptionIgnoreCollations>True</SyncOptionIgnoreCollations>
+    <SyncOptionIgnoreColumnsOrder>True</SyncOptionIgnoreColumnsOrder>
+    <SyncOptionIgnoreSynonymDatabaseAndServerName>True</SyncOptionIgnoreSynonymDatabaseAndServerName>
+    -->
+    <!-- These properties might be set by the DBA -->
+    <!--
+    <SyncOptionIgnoreDataspaces>False</SyncOptionIgnoreDataspaces>
+    <SyncOptionIgnoreConstraintNotForReplicationAttribute>True</SyncOptionIgnoreConstraintNotForReplicationAttribute>
+    <SyncOptionIgnoreIndexSortOrder>False</SyncOptionIgnoreIndexSortOrder>
+    <SyncOptionIgnoreIgnoreFillFactor>True</SyncOptionIgnoreFillFactor>
+    <SyncOptionIgnoreIndexLockAttributes>False</SyncOptionIgnoreIndexLockAttributes>
+    <SyncOptionIgnoreIndexSecondaryAttributes>False</SyncOptionIgnoreIndexSecondaryAttributes>
+    <SyncOptionIgnoreStatistics>True</SyncOptionIgnoreStatistics>
+    <SyncOptionIgnoreDataCompression>True</SyncOptionIgnoreDataCompression>
+    -->
+    <!-- Shared Developer/DBA options -->
+    <!--
+    <SyncOptionIgnoreIndexes>False</SyncOptionIgnoreIndexes>
+    <SyncOptionIgnoreSystemObjects>True</SyncOptionIgnoreSystemObjects>
+    <SyncOptionIgnorePermissions>False</SyncOptionIgnorePermissions>
+    <SyncOptionIgnoreConstraintWithNoCheckAttribute>True</SyncOptionIgnoreConstraintWithNoCheckAttribute>
+    <SyncOptionIgnoreIdentitySeedAndIncrement>False</SyncOptionIgnoreIdentitySeedAndIncrement>
+    -->
+    <!-- Exclude specific objects from being scripted, by object type & object name (using regular expression for name) -->
+    <!--
+    <ExcludeObjectsFromImport>
+      Assembly=\[myschemaname\];
+      Credential=\[mycredential\];
+      DatabaseDdlTrigger=\[ddltriggername\];
+      Default=\[dbautil\]\.\[(.*?)\];
+      PartitionFunction=\[mypartitionfunction\];
+      PartitionScheme=\[mypartitionfunction\];
+      Role=\[myrole\];
+      Rule=\[dbautil\]\.\[(.*?)\];
+      Schema=\[dbautil\];
+      Sequence=\[dbautil\]\.\[(.*?)\];
+      StoredProcedure=\[dbautil\]\.\[(.*?)\];
+      Synonym=\[dbautil\]\.\[(.*?)\];
+      Table=\[dbautil\]\.\[(.*?)\];
+      Trigger=\[dbautil\]\.\[(.*?)\];
+      User=\[myusername\];
+      UserDefinedDataType=\[dbautil\]\.\[(.*?)\];
+      UserDefinedFunction=\[dbautil\]\.\[(.*?)\];
+      View=\[dbautil\]\.\[(.*?)\];
+      XmlSchemaCollection=\[dbautil\]\.\[(.*?)\];
+      
+      Contract=\[myservicebrokercontract\];
+      EventNotification=\[myservicebrokereventnotification\];
+      MessageType=\[myservicebrokermessagetype\];
+      Queue=\[myservicebrokerqueue\];
+      RemoteServiceBinding=\[myservicebrokerremotebinding\];
+      Route=\[myservicebrokerroute\];
+      Service=\[myservicebrokerservice\];
+      
+    </ExcludeObjectsFromImport>    
+    -->
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <PropertyGroup>
+    <AppDataPath>$(LOCALAPPDATA)</AppDataPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(AppDataPath)==''">
+    <AppDataPath>$(APPDATA)</AppDataPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReadyRollTargetsPath>$(AppDataPath)\Microsoft\VisualStudio\12.0Exp\Extensions\ReadyRoll\ReadyRoll SQL Server Database Projects\1.0\ReadyRoll.Data.Schema.SSDT.targets</ReadyRollTargetsPath>
+  </PropertyGroup>
+  <Import Condition="Exists('$(ReadyRollTargetsPath)')" Project="$(ReadyRollTargetsPath)" />
+  <Import Condition="!Exists('$(ReadyRollTargetsPath)')" Project="$(MSBuildExtensionsPath)\ReadyRoll\ReadyRoll.Data.Schema.SSDT.targets" />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Pre-Deployment\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Post-Deployment\" />
+    <Folder Include="Programmable Objects\" />
+    <Folder Include="Programmable Objects\Functions\" />
+    <Folder Include="Programmable Objects\Stored Procedures\" />
+    <Folder Include="Programmable Objects\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pre-Deployment\01_Create_Database.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0001_20151209-1433_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Programmable Objects\Functions\dbo.ExtractWordsFromHTML.sql" />
+    <None Include="Programmable Objects\Functions\dbo.GetAllTagMappingData.sql" />
+    <None Include="Programmable Objects\Functions\dbo.GetPseudoCorrelationForTagMappingData.sql" />
+    <None Include="Programmable Objects\Functions\dbo.GetTagMappingsData.sql" />
+    <None Include="Programmable Objects\Functions\dbo.GetTagMappingsWithMeanData.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.AddStopWord.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.AddSynonym.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.ArchiveOldUserPoints.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.DeleteOldEmailRecipientRecords.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.DeleteWord.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.Email_ArchiveOldEmails.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.Email_GetEmailsReadyForSending.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.Email_GetMailboxMonitorConfiguration.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.Email_InsertNew.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.Email_MarkAsSent.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.Email_NewsletterLogBounce.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.Email_UnsubscribeAfterExcessiveBounces.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.EnsureForumThreadExistsForContentItem.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GenerateEmailRecipientsRows.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetBlogList.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetBlogPostTags.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetBlogUserID.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetDatabaseWeeklyHeadlines.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetDynamicPagesForSitemap.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetEvenSscNewsletterSubscribers.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetExternalBlogs.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetIndexerContents.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetMostRecentBlogPosts.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetMostRecentPostsInEachForum.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetMostSiteCorrelatedContentItems.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetMostSiteCorrelatedTags.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetOddSscNewsletterSubscribers.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetPopularContent.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetPopularTags.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetPublishedArticleAuthorUserIDs.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetSscForumProfileDetails.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetSscNewsletterSubscribersThird0.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetSscNewsletterSubscribersThird1.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetSscNewsletterSubscribersThird2.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetUserBannedStatus.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.GetUserIDFromBlogUserID.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.ListAnalysisEvents.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.ListStopWords.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.ListSynonymGroups.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.LogAnalysisEvent.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.LogEvent.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.LogSearchTerms.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.LogUtilityEvent.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.MoveAllTagMappings.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.NewSynonymGroup.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.prcGetTodaysContent.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.RollContentPerformanceAggregates.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.RunNightlyTasks.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.SaveContentPerformanceRecord.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.SendAuthorPublishingNotifications.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.SetNewContentItemsForRelease.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.SetScheduledItemsForRelease.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.TopScores.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.UpdatePopularityRanks.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.UpdatePublishingStatuses.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.UpdateStatsCaches.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.User_AllowUser.sql" />
+    <None Include="Programmable Objects\Stored Procedures\dbo.User_BanUser.sql" />
+    <None Include="Programmable Objects\Views\dbo.vw_AllContentItemIDs.sql" />
+    <None Include="Programmable Objects\Views\dbo.vw_Articles.sql" />
+    <None Include="Programmable Objects\Views\dbo.vw_ClickTrackingStatistics.sql" />
+    <None Include="Programmable Objects\Views\dbo.vw_CurrentContentPerformanceRecord.sql" />
+    <None Include="Programmable Objects\Views\dbo.vw_EmailQueuedReadyToSend.sql" />
+    <None Include="Programmable Objects\Views\dbo.vw_EmailsWithRecipientCounts.sql" />
+    <None Include="Programmable Objects\Views\dbo.vw_SampleContentItems.sql" />
+    <None Include="Programmable Objects\Views\dbo.WidgetPriceList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0002_20151209-1438_daner.sql" />
+  </ItemGroup>
+</Project>
