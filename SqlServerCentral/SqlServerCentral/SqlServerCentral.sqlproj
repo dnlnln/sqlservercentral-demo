@@ -32,8 +32,7 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <ExcludeObjectsFromSync />
     <IncludeObjectsInDataSync>
-Table=[dbo].[EmailerConfiguration];
-</IncludeObjectsInDataSync>
+    </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
   </PropertyGroup>
@@ -254,5 +253,8 @@ Table=[dbo].[EmailerConfiguration];
   </ItemGroup>
   <ItemGroup>
     <None Include="Migrations\0002_20151209-1438_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0003_20151209-1443_daner.sql" />
   </ItemGroup>
 </Project>
