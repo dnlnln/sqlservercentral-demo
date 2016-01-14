@@ -254,4 +254,7 @@
   <ItemGroup>
     <None Include="Migrations\0002_20160114-1946_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0003_20160114-1958_daner.sql" />
+  </ItemGroup>
 </Project>
