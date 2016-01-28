@@ -360,4 +360,7 @@
     <None Include="Schema-Model\Tables\dbo.WidgetReferences.sql" />
     <None Include="Schema-Model\Tables\dbo.Widgets.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\1.0.0-Baseline\0003_20160128-1930_daner.sql" />
+  </ItemGroup>
 </Project>
