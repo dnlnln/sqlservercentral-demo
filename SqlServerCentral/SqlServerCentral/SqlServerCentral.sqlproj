@@ -178,6 +178,7 @@
     <Folder Include="Schema-Model\Security\Roles\" />
     <Folder Include="Schema-Model\Security\Users\" />
     <Folder Include="Schema-Model\Tables\" />
+    <Folder Include="Migrations\1.1.0-FeatureA" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
@@ -361,6 +362,6 @@
     <None Include="Schema-Model\Tables\dbo.Widgets.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\1.0.0-Baseline\0003_20160128-1930_daner.sql" />
+    <None Include="Migrations\1.1.0-FeatureA\0003_20160128-1930_daner.sql" />
   </ItemGroup>
 </Project>
