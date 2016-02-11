@@ -34,6 +34,8 @@
     <IncludeObjectsInDataSync>
     </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
+    <DeployOnceUseSemver>True</DeployOnceUseSemver>
+    <SemverInitialBaseline>True</SemverInitialBaseline>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -164,6 +166,8 @@
     <Folder Include="Pre-Deployment\" />
     <Folder Include="Migrations\" />
     <Folder Include="Post-Deployment\" />
+    <Folder Include="Migrations\1.0.0-Baseline" />
+    <Folder Include="Migrations\1.1.0-AddColumn" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
@@ -172,12 +176,12 @@
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0001_20160211-1436_daner.sql" />
+    <None Include="Migrations\1.0.0-Baseline\0001_20160211-1436_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0002_20160211-1438_daner.sql" />
+    <None Include="Migrations\1.0.0-Baseline\0002_20160211-1438_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0003_20160211-1449_daner.sql" />
+    <None Include="Migrations\1.1.0-AddColumn\0003_20160211-1449_daner.sql" />
   </ItemGroup>
 </Project>
