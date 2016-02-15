@@ -35,6 +35,8 @@
 Table=[dbo].[EmailerConfiguration];
 </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
+    <DeployOnceUseSemver>True</DeployOnceUseSemver>
+    <SemverInitialBaseline>True</SemverInitialBaseline>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -165,6 +167,8 @@ Table=[dbo].[EmailerConfiguration];
     <Folder Include="Pre-Deployment\" />
     <Folder Include="Migrations\" />
     <Folder Include="Post-Deployment\" />
+    <Folder Include="Migrations\1.0.0-Baseline" />
+    <Folder Include="Migrations\1.1.0-AddColumnFeature" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
@@ -173,12 +177,12 @@ Table=[dbo].[EmailerConfiguration];
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0001_20160215-1141_daner.sql" />
+    <None Include="Migrations\1.0.0-Baseline\0001_20160215-1141_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0002_20160215-1144_daner.sql" />
+    <None Include="Migrations\1.0.0-Baseline\0002_20160215-1144_daner.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0003_20160215-1154_daner.sql" />
+    <None Include="Migrations\1.1.0-AddColumnFeature\0001_20160215-1154_daner.sql" />
   </ItemGroup>
 </Project>
