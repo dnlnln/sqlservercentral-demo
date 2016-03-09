@@ -256,4 +256,7 @@
     <None Include="Programmable Objects\Views\dbo.vw_SampleContentItems.sql" />
     <None Include="Programmable Objects\Views\dbo.WidgetPriceList.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0003_20160309-1930_daner.sql" />
+  </ItemGroup>
 </Project>
