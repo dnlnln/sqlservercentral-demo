@@ -31,7 +31,8 @@
     <PostDeploymentSubFolder>Post-Deployment</PostDeploymentSubFolder>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <ExcludeObjectsFromSync />
-    <IncludeObjectsInDataSync />
+    <IncludeObjectsInDataSync>
+    </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
   </PropertyGroup>
@@ -250,5 +251,8 @@
     <None Include="Programmable Objects\Views\dbo.vw_EmailsWithRecipientCounts.sql" />
     <None Include="Programmable Objects\Views\dbo.vw_SampleContentItems.sql" />
     <None Include="Programmable Objects\Views\dbo.WidgetPriceList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0002_20160309-1847_daner.sql" />
   </ItemGroup>
 </Project>
