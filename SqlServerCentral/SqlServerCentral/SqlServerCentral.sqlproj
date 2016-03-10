@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SqlServerCentral</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{374857c2-d402-4e64-9f08-e63b76ff0de8}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SqlServerCentral</RootNamespace>
+    <AssemblyName>SqlServerCentral</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+    <IsReadyRollProject>True</IsReadyRollProject>
+    <ReadyRollToolsVersion>1.12</ReadyRollToolsVersion>
+    <DeployOnceSubFolder>Migrations</DeployOnceSubFolder>
+    <DeployChangesSubFolder>Programmable Objects</DeployChangesSubFolder>
+    <DeployChangesImportSchemaFolders>True</DeployChangesImportSchemaFolders>
+    <PreDeploymentSubFolder>Pre-Deployment</PreDeploymentSubFolder>
+    <PostDeploymentSubFolder>Post-Deployment</PostDeploymentSubFolder>
+    <SyncToOfflineSchemaModel>True</SyncToOfflineSchemaModel>
+    <SyncToOfflineSchemaModelBySchema>True</SyncToOfflineSchemaModelBySchema>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <ExcludeObjectsFromSync />
+    <IncludeObjectsInDataSync>
+    </IncludeObjectsInDataSync>
+    <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
+  </PropertyGroup>
+  <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
+  <PropertyGroup>
+    <!--
+    <SyncToOfflineSchemaModel>True</SyncToOfflineSchemaModel>
+    <SyncToOfflineSchemaModelBySchema>False</SyncToOfflineSchemaModelBySchema>
+    <SyncToOfflineSchemaModelObjectTypes>Table;Assembly;Contract;Credential;Default;EventNotification;FileGroup;FullTextCatalog;FullTextIndex;FullTextIndexColumn;FullTextStopList;FullTextStopListStopWord;MessageType;PartitionFunction;PartitionScheme;Queue;RemoteServiceBinding;Role;Route;Rule;Schema;SearchPropertyList;Sequence;Service;Synonym;Users;UserDefinedDataType;XmlSchemaCollection</SyncToOfflineSchemaModelObjectTypes>
+    <SchemaModelSubFolder>Schema-Model</SchemaModelSubFolder>
+    -->
+  </PropertyGroup>
+  <!-- READYROLL DEPLOY-CHANGE MIGRATION OPTIONS -->
+  <PropertyGroup>
+    <!--
+    <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
+    <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
+    <DeployChangesImportObjectTypes>StoredProcedure;UserDefinedFunction;View;Trigger;DatabaseDdlTrigger</DeployChangesImportObjectTypes>
+    <DeployChangesSubFolder>Deploy-Changes</DeployChangesSubFolder>
+    -->
+  </PropertyGroup>
+  <!-- READYROLL SCRIPT GENERATION OPTIONS -->
+  <PropertyGroup>
+    <!-- These properties might be set by the Developer -->
+    <!--
+    <SyncOptionIncludeDependentObjects>False</SyncOptionIncludeDependentObjects>
+    <SyncOptionIncludeExistenceChecks>False</SyncOptionIncludeExistenceChecks>
+    <SyncOptionUseDropCreateInsteadOfAlter>False</SyncOptionUseDropCreateInsteadOfAlter>
+    <SyncOptionDisableDdlTriggers>True</SyncOptionDisableDdlTriggers>
+    
+    <SyncOptionIgnoreExtendedProperties>False</SyncOptionIgnoreExtendedProperties>
+    <SyncOptionIgnoreCommentsInBodies>False</SyncOptionIgnoreCommentsInBodies>
+    <SyncOptionIgnoreAnsiOptions>False</SyncOptionIgnoreAnsiOptions>
+    <SyncOptionIgnoreCollations>True</SyncOptionIgnoreCollations>
+    <SyncOptionIgnoreColumnsOrder>True</SyncOptionIgnoreColumnsOrder>
+    <SyncOptionIgnoreSynonymDatabaseAndServerName>True</SyncOptionIgnoreSynonymDatabaseAndServerName>
+    -->
+    <!-- These properties might be set by the DBA -->
+    <!--
+    <SyncOptionIgnoreDataspaces>False</SyncOptionIgnoreDataspaces>
+    <SyncOptionIgnoreConstraintNotForReplicationAttribute>True</SyncOptionIgnoreConstraintNotForReplicationAttribute>
+    <SyncOptionIgnoreIndexSortOrder>False</SyncOptionIgnoreIndexSortOrder>
+    <SyncOptionIgnoreIgnoreFillFactor>True</SyncOptionIgnoreFillFactor>
+    <SyncOptionIgnoreIndexLockAttributes>False</SyncOptionIgnoreIndexLockAttributes>
+    <SyncOptionIgnoreIndexSecondaryAttributes>False</SyncOptionIgnoreIndexSecondaryAttributes>
+    <SyncOptionIgnoreStatistics>True</SyncOptionIgnoreStatistics>
+    <SyncOptionIgnoreDataCompression>True</SyncOptionIgnoreDataCompression>
+    <SyncOptionIgnoreFullTextIndexing>False</SyncOptionIgnoreFullTextIndexing>
+    -->
+    <!-- Shared Developer/DBA options -->
+    <!--
+    <SyncOptionIgnoreIndexes>False</SyncOptionIgnoreIndexes>
+    <SyncOptionIgnoreSystemObjects>True</SyncOptionIgnoreSystemObjects>
+    <SyncOptionIgnorePermissions>False</SyncOptionIgnorePermissions>
+    <SyncOptionIgnoreConstraintWithNoCheckAttribute>True</SyncOptionIgnoreConstraintWithNoCheckAttribute>
+    <SyncOptionIgnoreIdentitySeedAndIncrement>False</SyncOptionIgnoreIdentitySeedAndIncrement>
+    -->
+    <!-- Exclude specific objects from being scripted, by object type & object name (using regular expression for name) -->
+    <!--
+    <ExcludeObjectsFromImport>
+      Assembly=\[myschemaname\];
+      Credential=\[mycredential\];
+      DatabaseDdlTrigger=\[ddltriggername\];
+      Default=\[dbautil\]\.\[(.*?)\];
+      PartitionFunction=\[mypartitionfunction\];
+      PartitionScheme=\[mypartitionfunction\];
+      Role=\[myrole\];
+      Rule=\[dbautil\]\.\[(.*?)\];
+      Schema=\[dbautil\];
+      Sequence=\[dbautil\]\.\[(.*?)\];
+      StoredProcedure=\[dbautil\]\.\[(.*?)\];
+      Synonym=\[dbautil\]\.\[(.*?)\];
+      Table=\[dbautil\]\.\[(.*?)\];
+      Trigger=\[dbautil\]\.\[(.*?)\];
+      User=\[myusername\];
+      UserDefinedDataType=\[dbautil\]\.\[(.*?)\];
+      UserDefinedFunction=\[dbautil\]\.\[(.*?)\];
+      View=\[dbautil\]\.\[(.*?)\];
+      XmlSchemaCollection=\[dbautil\]\.\[(.*?)\];
+      
+      Contract=\[myservicebrokercontract\];
+      EventNotification=\[myservicebrokereventnotification\];
+      MessageType=\[myservicebrokermessagetype\];
+      Queue=\[myservicebrokerqueue\];
+      RemoteServiceBinding=\[myservicebrokerremotebinding\];
+      Route=\[myservicebrokerroute\];
+      Service=\[myservicebrokerservice\];
+      
+    </ExcludeObjectsFromImport>    
+    -->
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <PropertyGroup>
+    <AppDataPath>$(LOCALAPPDATA)</AppDataPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(AppDataPath)==''">
+    <AppDataPath>$(APPDATA)</AppDataPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReadyRollTargetsPath>$(AppDataPath)\Microsoft\VisualStudio\12.0Exp\Extensions\ReadyRoll\ReadyRoll SQL Server Database Projects\1.0\ReadyRoll.Data.Schema.SSDT.targets</ReadyRollTargetsPath>
+  </PropertyGroup>
+  <Import Condition="Exists('$(ReadyRollTargetsPath)')" Project="$(ReadyRollTargetsPath)" />
+  <Import Condition="!Exists('$(ReadyRollTargetsPath)')" Project="$(MSBuildExtensionsPath)\ReadyRoll\ReadyRoll.Data.Schema.SSDT.targets" />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Pre-Deployment\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Post-Deployment\" />
+    <Folder Include="Schema-Model\" />
+    <Folder Include="Schema-Model\Assemblies\" />
+    <Folder Include="Schema-Model\dbo\" />
+    <Folder Include="Schema-Model\dbo\Tables\" />
+    <Folder Include="Schema-Model\Security\" />
+    <Folder Include="Schema-Model\Security\Roles\" />
+    <Folder Include="Schema-Model\Security\Users\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pre-Deployment\01_Create_Database.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schema-Model\Assemblies\SQLHtmlParser.sql" />
+    <None Include="Schema-Model\dbo\Tables\Adverts.sql" />
+    <None Include="Schema-Model\dbo\Tables\AnalysisLog.sql" />
+    <None Include="Schema-Model\dbo\Tables\Answers.sql" />
+    <None Include="Schema-Model\dbo\Tables\Articles.sql" />
+    <None Include="Schema-Model\dbo\Tables\ArticleSeries.sql" />
+    <None Include="Schema-Model\dbo\Tables\AuthorContentItem.sql" />
+    <None Include="Schema-Model\dbo\Tables\AuthorScheduleNotificationsLog.sql" />
+    <None Include="Schema-Model\dbo\Tables\BadEmailAddresses.sql" />
+    <None Include="Schema-Model\dbo\Tables\BlogPosts.sql" />
+    <None Include="Schema-Model\dbo\Tables\Blogs.sql" />
+    <None Include="Schema-Model\dbo\Tables\BriefcaseEntries.sql" />
+    <None Include="Schema-Model\dbo\Tables\BriefcaseEntryTags.sql" />
+    <None Include="Schema-Model\dbo\Tables\ClickTrackingClicks.sql" />
+    <None Include="Schema-Model\dbo\Tables\ClickTrackingURLs.sql" />
+    <None Include="Schema-Model\dbo\Tables\CommunityServerBlogOwners.sql" />
+    <None Include="Schema-Model\dbo\Tables\CommunityServerBlogPosts.sql" />
+    <None Include="Schema-Model\dbo\Tables\CommunityServerBlogs.sql" />
+    <None Include="Schema-Model\dbo\Tables\Contacts.sql" />
+    <None Include="Schema-Model\dbo\Tables\ContentItemRatings.sql" />
+    <None Include="Schema-Model\dbo\Tables\ContentItems.sql" />
+    <None Include="Schema-Model\dbo\Tables\ContentItemsScheduledRelease.sql" />
+    <None Include="Schema-Model\dbo\Tables\ContentPerformanceRecord.sql" />
+    <None Include="Schema-Model\dbo\Tables\DataMigrations.sql" />
+    <None Include="Schema-Model\dbo\Tables\EmailerConfiguration.sql" />
+    <None Include="Schema-Model\dbo\Tables\EmailRecipients.sql" />
+    <None Include="Schema-Model\dbo\Tables\EmailRecipientSources.sql" />
+    <None Include="Schema-Model\dbo\Tables\Emails.sql" />
+    <None Include="Schema-Model\dbo\Tables\EmailsArchive.sql" />
+    <None Include="Schema-Model\dbo\Tables\EventLog.sql" />
+    <None Include="Schema-Model\dbo\Tables\FileBlobs.sql" />
+    <None Include="Schema-Model\dbo\Tables\FileContentItems.sql" />
+    <None Include="Schema-Model\dbo\Tables\Files.sql" />
+    <None Include="Schema-Model\dbo\Tables\ForumOrder.sql" />
+    <None Include="Schema-Model\dbo\Tables\ForumTopics.sql" />
+    <None Include="Schema-Model\dbo\Tables\Fragments.sql" />
+    <None Include="Schema-Model\dbo\Tables\MailboxMonitorConfiguration.sql" />
+    <None Include="Schema-Model\dbo\Tables\NewsletterBounceForwarding.sql" />
+    <None Include="Schema-Model\dbo\Tables\NewsletterBounceLog.sql" />
+    <None Include="Schema-Model\dbo\Tables\NewsletterRecipientCounts.sql" />
+    <None Include="Schema-Model\dbo\Tables\NewsletterUnsubscribeThresholds.sql" />
+    <None Include="Schema-Model\dbo\Tables\QuestionAttempt.sql" />
+    <None Include="Schema-Model\dbo\Tables\QuestionAttemptAnswers.sql" />
+    <None Include="Schema-Model\dbo\Tables\Questions.sql" />
+    <None Include="Schema-Model\dbo\Tables\ScheduleEntries.sql" />
+    <None Include="Schema-Model\dbo\Tables\Scripts.sql" />
+    <None Include="Schema-Model\dbo\Tables\SearchAnalyzerConfig.sql" />
+    <None Include="Schema-Model\dbo\Tables\Sources.sql" />
+    <None Include="Schema-Model\dbo\Tables\StairwaySeriesArticles.sql" />
+    <None Include="Schema-Model\dbo\Tables\StaticTextFragments.sql" />
+    <None Include="Schema-Model\dbo\Tables\StatsCache_ContentItemMappingsByTag.sql" />
+    <None Include="Schema-Model\dbo\Tables\StatsCache_TagMappingsByContentItem.sql" />
+    <None Include="Schema-Model\dbo\Tables\StatsCache_UserTagMappingsByContentItem.sql" />
+    <None Include="Schema-Model\dbo\Tables\SyndicatedBlogPosts.sql" />
+    <None Include="Schema-Model\dbo\Tables\SyndicatedBlogs.sql" />
+    <None Include="Schema-Model\dbo\Tables\SyndicatedCommentCaches.sql" />
+    <None Include="Schema-Model\dbo\Tables\SyndicatedComments.sql" />
+    <None Include="Schema-Model\dbo\Tables\TagMappings.sql" />
+    <None Include="Schema-Model\dbo\Tables\Tags.sql" />
+    <None Include="Schema-Model\dbo\Tables\UserLogins.sql" />
+    <None Include="Schema-Model\dbo\Tables\UserPoints.sql" />
+    <None Include="Schema-Model\dbo\Tables\Users.sql" />
+    <None Include="Schema-Model\dbo\Tables\UserSearches.sql" />
+    <None Include="Schema-Model\dbo\Tables\UtilitiesLog.sql" />
+    <None Include="Schema-Model\dbo\Tables\WidgetDescriptions.sql" />
+    <None Include="Schema-Model\dbo\Tables\WidgetPrices.sql" />
+    <None Include="Schema-Model\dbo\Tables\WidgetPurchases.sql" />
+    <None Include="Schema-Model\dbo\Tables\WidgetReferences.sql" />
+    <None Include="Schema-Model\dbo\Tables\Widgets.sql" />
+    <None Include="Schema-Model\Security\Roles\db_datareader.sql" />
+    <None Include="Schema-Model\Security\Roles\db_datawriter.sql" />
+    <None Include="Schema-Model\Security\Roles\db_ddladmin.sql" />
+    <None Include="Schema-Model\Security\Roles\db_executor.sql" />
+    <None Include="Schema-Model\Security\Roles\db_owner.sql" />
+    <None Include="Schema-Model\Security\Roles\db_securityadmin.sql" />
+    <None Include="Schema-Model\Security\Roles\Emailer.sql" />
+    <None Include="Schema-Model\Security\Roles\ssc_webapplication.sql" />
+    <None Include="Schema-Model\Security\Users\chris.massey.sql" />
+    <None Include="Schema-Model\Security\Users\CommunityServer.sql" />
+    <None Include="Schema-Model\Security\Users\DataMigrator_user.sql" />
+    <None Include="Schema-Model\Security\Users\dave.convery.sql" />
+    <None Include="Schema-Model\Security\Users\ForumsUser.sql" />
+    <None Include="Schema-Model\Security\Users\jess.nickson.sql" />
+    <None Include="Schema-Model\Security\Users\melanie.townsend.sql" />
+    <None Include="Schema-Model\Security\Users\Michael.Williamson.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer3.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer4.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer5.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_emailer6.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_rssimporter.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_searchindexer.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_update.sql" />
+    <None Include="Schema-Model\Security\Users\ssc_web.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0001_20160311-0714_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0002_20160311-0718_daner.sql" />
+  </ItemGroup>
+</Project>
