@@ -359,4 +359,7 @@
     <None Include="Programmable Objects\dbo\Views\vw_SampleContentItems.sql" />
     <None Include="Programmable Objects\dbo\Views\WidgetPriceList.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0003_EmailerConfiguration_CreatedDate.sql" />
+  </ItemGroup>
 </Project>
