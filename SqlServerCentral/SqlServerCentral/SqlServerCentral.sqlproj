@@ -37,7 +37,8 @@
     </ExcludeObjectsFromSync>
     <IncludeObjectsInDataSync>
     </IncludeObjectsInDataSync>
-    <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
+    <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
+    <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -174,6 +175,11 @@
     <Folder Include="Schema-Model\Security\" />
     <Folder Include="Schema-Model\Security\Roles\" />
     <Folder Include="Schema-Model\Security\Users\" />
+    <Folder Include="Programmable Objects\" />
+    <Folder Include="Programmable Objects\dbo\" />
+    <Folder Include="Programmable Objects\dbo\Functions\" />
+    <Folder Include="Programmable Objects\dbo\Stored Procedures\" />
+    <Folder Include="Programmable Objects\dbo\Views\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
@@ -279,5 +285,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Migrations\0002_Import-Data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Programmable Objects\dbo\Functions\ExtractWordsFromHTML.sql" />
+    <None Include="Programmable Objects\dbo\Functions\GetAllTagMappingData.sql" />
+    <None Include="Programmable Objects\dbo\Functions\GetPseudoCorrelationForTagMappingData.sql" />
+    <None Include="Programmable Objects\dbo\Functions\GetTagMappingsData.sql" />
+    <None Include="Programmable Objects\dbo\Functions\GetTagMappingsWithMeanData.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\AddStopWord.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\AddSynonym.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\ArchiveOldUserPoints.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\DeleteOldEmailRecipientRecords.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\DeleteWord.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\Email_ArchiveOldEmails.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\Email_GetEmailsReadyForSending.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\Email_GetMailboxMonitorConfiguration.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\Email_InsertNew.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\Email_MarkAsSent.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\Email_NewsletterLogBounce.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\Email_UnsubscribeAfterExcessiveBounces.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\EnsureForumThreadExistsForContentItem.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GenerateEmailRecipientsRows.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetBlogList.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetBlogPostTags.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetBlogUserID.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetDatabaseWeeklyHeadlines.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetDynamicPagesForSitemap.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetEvenSscNewsletterSubscribers.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetExternalBlogs.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetIndexerContents.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetMostRecentBlogPosts.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetMostRecentPostsInEachForum.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetMostSiteCorrelatedContentItems.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetMostSiteCorrelatedTags.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetOddSscNewsletterSubscribers.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetPopularContent.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetPopularTags.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetPublishedArticleAuthorUserIDs.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetSscForumProfileDetails.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetSscNewsletterSubscribersThird0.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetSscNewsletterSubscribersThird1.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetSscNewsletterSubscribersThird2.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetUserBannedStatus.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\GetUserIDFromBlogUserID.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\ListAnalysisEvents.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\ListStopWords.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\ListSynonymGroups.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\LogAnalysisEvent.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\LogEvent.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\LogSearchTerms.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\LogUtilityEvent.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\MoveAllTagMappings.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\NewSynonymGroup.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\prcGetTodaysContent.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\RollContentPerformanceAggregates.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\RunNightlyTasks.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\SaveContentPerformanceRecord.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\SendAuthorPublishingNotifications.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\SetNewContentItemsForRelease.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\SetScheduledItemsForRelease.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\TopScores.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\UpdatePopularityRanks.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\UpdatePublishingStatuses.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\UpdateStatsCaches.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\User_AllowUser.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\User_BanUser.sql" />
+    <None Include="Programmable Objects\dbo\Views\vw_AllContentItemIDs.sql" />
+    <None Include="Programmable Objects\dbo\Views\vw_Articles.sql" />
+    <None Include="Programmable Objects\dbo\Views\vw_ClickTrackingStatistics.sql" />
+    <None Include="Programmable Objects\dbo\Views\vw_CurrentContentPerformanceRecord.sql" />
+    <None Include="Programmable Objects\dbo\Views\vw_EmailQueuedReadyToSend.sql" />
+    <None Include="Programmable Objects\dbo\Views\vw_EmailsWithRecipientCounts.sql" />
+    <None Include="Programmable Objects\dbo\Views\vw_SampleContentItems.sql" />
+    <None Include="Programmable Objects\dbo\Views\WidgetPriceList.sql" />
   </ItemGroup>
 </Project>
