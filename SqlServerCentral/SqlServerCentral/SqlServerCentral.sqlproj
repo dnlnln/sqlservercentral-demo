@@ -282,4 +282,7 @@
   <ItemGroup>
     <None Include="Migrations\0002_20160517-1731_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0003_20160517-1745_daner.sql" />
+  </ItemGroup>
 </Project>
