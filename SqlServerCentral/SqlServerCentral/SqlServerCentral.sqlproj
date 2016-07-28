@@ -34,9 +34,13 @@
     <SyncToOfflineSchemaModelBySchema>True</SyncToOfflineSchemaModelBySchema>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <ExcludeObjectsFromSync />
-    <IncludeObjectsInDataSync />
+    <IncludeObjectsInDataSync>
+    </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
+    <GenerateOctopusNuPkg>False</GenerateOctopusNuPkg>
+    <DeployOnceUseSemver>True</DeployOnceUseSemver>
+    <SemverInitialBaseline>True</SemverInitialBaseline>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -179,6 +183,8 @@
     <Folder Include="Programmable Objects\dbo\Functions\" />
     <Folder Include="Programmable Objects\dbo\Stored Procedures\" />
     <Folder Include="Programmable Objects\dbo\Views\" />
+    <Folder Include="Migrations\12.0.0-Baseline" />
+    <Folder Include="Migrations\12.1.0-NewChanges" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
@@ -283,9 +289,6 @@
     <None Include="Schema-Model\Security\Users\ssc_web.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0001_Create-objects.sql" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Programmable Objects\dbo\Functions\ExtractWordsFromHTML.sql" />
     <None Include="Programmable Objects\dbo\Functions\GetAllTagMappingData.sql" />
     <None Include="Programmable Objects\dbo\Functions\GetPseudoCorrelationForTagMappingData.sql" />
@@ -357,5 +360,26 @@
     <None Include="Programmable Objects\dbo\Views\vw_EmailsWithRecipientCounts.sql" />
     <None Include="Programmable Objects\dbo\Views\vw_SampleContentItems.sql" />
     <None Include="Programmable Objects\dbo\Views\WidgetPriceList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="OctopusEnvironmentName">
+      <DefaultValue>Dev</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.0.0-Baseline\0001_Create-objects.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.0.0-Baseline\0002_20160729-0618_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.1.0-NewChanges\0003_20160729-0622_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.1.0-NewChanges\0004_20160729-0624_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.1.0-NewChanges\0005_20160729-0629_daner.sql" />
   </ItemGroup>
 </Project>
