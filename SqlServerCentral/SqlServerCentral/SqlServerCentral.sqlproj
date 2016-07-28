@@ -367,4 +367,13 @@ Table=[dbo].[EmailerConfiguration];
   <ItemGroup>
     <None Include="Migrations\1.0.0-Baseline\0002_20160728-1535_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\1.1.0-NewChanges\001_20160728-1542_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="OctopusEnvironmentName">
+      <DefaultValue>Development</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
 </Project>
