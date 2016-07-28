@@ -365,4 +365,13 @@
   <ItemGroup>
     <None Include="Migrations\12.1.0-NewChanges\001_20160728-1627_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.1.0-NewChanges\002_20160728-1636_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="OctopusEnvironmentName">
+      <DefaultValue>Dev</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
 </Project>
