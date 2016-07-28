@@ -35,8 +35,7 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <ExcludeObjectsFromSync />
     <IncludeObjectsInDataSync>
-Table=[dbo].[EmailerConfiguration];
-</IncludeObjectsInDataSync>
+    </IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
     <DeployOnceUseSemver>True</DeployOnceUseSemver>
@@ -375,5 +374,8 @@ Table=[dbo].[EmailerConfiguration];
       <DefaultValue>Development</DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>
     </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\1.1.0-NewChanges\002_20160728-1547_daner.sql" />
   </ItemGroup>
 </Project>
