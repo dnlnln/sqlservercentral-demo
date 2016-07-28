@@ -37,6 +37,8 @@
     <IncludeObjectsInDataSync />
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
+    <DeployOnceUseSemver>True</DeployOnceUseSemver>
+    <SemverInitialBaseline>True</SemverInitialBaseline>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -179,6 +181,8 @@
     <Folder Include="Programmable Objects\dbo\Functions\" />
     <Folder Include="Programmable Objects\dbo\Stored Procedures\" />
     <Folder Include="Programmable Objects\dbo\Views\" />
+    <Folder Include="Migrations\12.0.0-Baseline" />
+    <Folder Include="Migrations\12.1.0-NewChanges" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pre-Deployment\01_Create_Database.sql" />
@@ -283,9 +287,6 @@
     <None Include="Schema-Model\Security\Users\ssc_web.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations\0001_20160728-1611_daner.sql" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Programmable Objects\dbo\Functions\ExtractWordsFromHTML.sql" />
     <None Include="Programmable Objects\dbo\Functions\GetAllTagMappingData.sql" />
     <None Include="Programmable Objects\dbo\Functions\GetPseudoCorrelationForTagMappingData.sql" />
@@ -357,5 +358,8 @@
     <None Include="Programmable Objects\dbo\Views\vw_EmailsWithRecipientCounts.sql" />
     <None Include="Programmable Objects\dbo\Views\vw_SampleContentItems.sql" />
     <None Include="Programmable Objects\dbo\Views\WidgetPriceList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.0.0-Baseline\0001_20160728-1611_daner.sql" />
   </ItemGroup>
 </Project>
