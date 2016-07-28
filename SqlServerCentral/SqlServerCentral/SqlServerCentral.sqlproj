@@ -362,4 +362,7 @@
   <ItemGroup>
     <None Include="Migrations\12.0.0-Baseline\0001_20160728-1611_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.1.0-NewChanges\001_20160728-1627_daner.sql" />
+  </ItemGroup>
 </Project>
