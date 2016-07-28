@@ -369,9 +369,16 @@
     <None Include="Migrations\12.1.0-NewChanges\002_20160728-1636_daner.sql" />
   </ItemGroup>
   <ItemGroup>
+    <SqlCmdVariable Include="myvariable">
+      <DefaultValue>foo</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
     <SqlCmdVariable Include="OctopusEnvironmentName">
       <DefaultValue>Dev</DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>
     </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\12.1.0-NewChanges\003_20160728-1639_daner.sql" />
   </ItemGroup>
 </Project>
