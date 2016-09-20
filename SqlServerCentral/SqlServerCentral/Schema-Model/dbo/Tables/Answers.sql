@@ -4,7 +4,8 @@ CREATE TABLE [dbo].[Answers]
 [ContentItemID] [int] NOT NULL,
 [AnswerText] [varchar] (500) NOT NULL,
 [IsCorrect] [bit] NOT NULL,
-[SortOrder] [int] NOT NULL
+[SortOrder] [int] NOT NULL,
+[CreatedDate] [datetime2] NOT NULL CONSTRAINT [DF_Answers_CreatedDate] DEFAULT (sysdatetime())
 )
 GO
 ALTER TABLE [dbo].[Answers] ADD CONSTRAINT [PK_Answers] PRIMARY KEY CLUSTERED  ([AnswerID])
