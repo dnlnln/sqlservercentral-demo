@@ -34,7 +34,9 @@
     <SyncToOfflineSchemaModelBySchema>True</SyncToOfflineSchemaModelBySchema>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <ExcludeObjectsFromSync />
-    <IncludeObjectsInDataSync />
+    <IncludeObjectsInDataSync>
+Table=[dbo].[EmailerConfiguration];
+</IncludeObjectsInDataSync>
     <DeployChangesInitialImportDone>False</DeployChangesInitialImportDone>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
@@ -277,5 +279,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Migrations\0001_20160920-1413_daner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0002_20160920-1419_daner.sql" />
   </ItemGroup>
 </Project>
