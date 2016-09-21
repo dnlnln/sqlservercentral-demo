@@ -368,4 +368,7 @@ Table=[dbo].[EmailerConfiguration];
   <ItemGroup>
     <None Include="Migrations\0004_20160921-1514_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\0005_20160921-1524_daner.sql" />
+  </ItemGroup>
 </Project>
