@@ -4,7 +4,7 @@ CREATE TABLE [dbo].[ArticleSeries]
 [BannerImageFileID] [int] NULL,
 [AdvertImageID] [int] NULL,
 [AdvertUrl] [nvarchar] (255) NULL,
-[IsStairwaySeries] [bit] NOT NULL CONSTRAINT [DF__ArticleSe__IsSta__24285DB4] DEFAULT ((1))
+[IsStairwaySeries] [bit] NULL CONSTRAINT [DF__ArticleSe__IsSta__24285DB4] DEFAULT ((1))
 )
 GO
 ALTER TABLE [dbo].[ArticleSeries] ADD CONSTRAINT [PK__Stairway__B851BC8C3F115E1A] PRIMARY KEY CLUSTERED  ([ContentItemID])

@@ -7,6 +7,8 @@ CREATE TABLE [dbo].[Answers]
 [SortOrder] [int] NOT NULL,
 [CreatedDate] [datetime2] NOT NULL CONSTRAINT [DF_Answers_CreatedDate] DEFAULT (sysdatetime())
 )
+CREATE NONCLUSTERED INDEX [IX_Answers] ON [dbo].[Answers] ([AnswerText])
+
 GO
 ALTER TABLE [dbo].[Answers] ADD CONSTRAINT [PK_Answers] PRIMARY KEY CLUSTERED  ([AnswerID])
 GO
