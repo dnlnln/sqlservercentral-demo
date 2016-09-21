@@ -3,7 +3,8 @@ CREATE TABLE [dbo].[AnalysisLog]
 [AnalysisLogID] [int] NOT NULL IDENTITY(1, 1),
 [Time] [datetime] NOT NULL,
 [Data] [varchar] (50) NOT NULL CONSTRAINT [DF_AnalysisImageLog_Data] DEFAULT (''),
-[Count] [int] NOT NULL
+[Count] [int] NOT NULL,
+[CreatedDate] [datetime2] NOT NULL CONSTRAINT [DF_AnalysisLog_CreatedDate] DEFAULT (sysdatetime())
 )
 GO
 ALTER TABLE [dbo].[AnalysisLog] ADD CONSTRAINT [PK__AnalysisImageLog__1CBC4616] PRIMARY KEY CLUSTERED  ([AnalysisLogID])
