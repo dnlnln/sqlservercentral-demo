@@ -192,8 +192,7 @@
   <PropertyGroup Condition="$(AppDataPath)==''">
     <AppDataPath>$(APPDATA)</AppDataPath>
   </PropertyGroup>
-  <PropertyGroup Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">
-    <!-- Try and find the solution folder (where the NuGet packages reside) in the parent folder and the project folder -->
+  <!--<PropertyGroup Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">
     <SolutionDir>$([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory)))\</SolutionDir>
     <SolutionDir Condition="!Exists('$(SolutionDir)packages\')">$(MSBuildProjectDirectory)\</SolutionDir>
   </PropertyGroup>
@@ -204,7 +203,7 @@
     <ReadyRollPackageDir>$([System.IO.Directory]::GetDirectories($(NuGetPackagesDir), `ReadyRoll.MSBuild.*`)[0])\</ReadyRollPackageDir>
     <ReadyRollTargetsPath>$(ReadyRollPackageDir)tools\ReadyRoll.Data.Schema.SSDT.targets</ReadyRollTargetsPath>
   </PropertyGroup>
-  <Import Condition="Exists('$(ReadyRollTargetsPath)')" Project="$(ReadyRollTargetsPath)" />
+  <Import Condition="Exists('$(ReadyRollTargetsPath)')" Project="$(ReadyRollTargetsPath)" />-->
   <Import Condition="!Exists('$(ReadyRollTargetsPath)')" Project="$(MSBuildExtensionsPath)\ReadyRoll\ReadyRoll.Data.Schema.SSDT.targets" />
   <ItemGroup>
     <Folder Include="Properties\" />
