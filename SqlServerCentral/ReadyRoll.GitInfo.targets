@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(SolutionDir)\packages\GitInfo.1.1.45\build\GitInfo.targets" Condition="Exists('$(SolutionDir)\packages\GitInfo.1.1.45\build\GitInfo.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\packages\GitInfo.1.1.45\build\GitInfo.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\GitInfo.1.1.45\build\GitInfo.targets'))" />
+  </Target>
+  <Target Name="ShowGitBranch" DependsOnTargets="GitInfo" BeforeTargets="SqlPatchBuild" Condition="'$(BuildingInsideVisualStudio)' == 'True' and $(GitBranch) != '' and Exists('$(MSBuildProjectFullPath).user')">
+    <PropertyGroup>
+      <GitBranchTargetDatabase>$(SqlTargetName)_$(GitBranch)</GitBranchTargetDatabase>
+      <ProjFileNamespace>&lt;Namespace Prefix='p' Uri='http://schemas.microsoft.com/developer/msbuild/2003'/&gt;</ProjFileNamespace>
+      <TargetDatabaseBaseXPath>/p:Project/p:PropertyGroup/p:TargetDatabase</TargetDatabaseBaseXPath>
+    </PropertyGroup>
+
+    <XmlPeek Namespaces="$(ProjFileNameSpace)"
+             XmlInputPath="$(MSBuildProjectFullPath).user"
+             Query="$(TargetDatabaseBaseXPath)/text()">
+      <Output TaskParameter="Result" ItemName="CurrentGitBranchTargetDatabase" />
+    </XmlPeek>
+
+    <PropertyGroup Condition="@(CurrentGitBranchTargetDatabase) != $(GitBranchTargetDatabase) or $(FinalTargetDatabase) != $(GitBranchTargetDatabase)">
+      <IsUserFileUpdateRequired>True</IsUserFileUpdateRequired>
+    </PropertyGroup>
+
+    <Message Condition="$(IsUserFileUpdateRequired) != 'True'"
+             Text="Git branch name matches target db name, so no project update is required ($(GitBranchTargetDatabase))"
+             Importance="High" />
+
+    <Message Condition="$(IsUserFileUpdateRequired) == 'True'"
+             Text="Project update will be performed as Git branch has changed. User file target db: @(CurrentGitBranchTargetDatabase), current target: $(FinalTargetDatabase), new target: $(GitBranchTargetDatabase)"
+             Importance="High" />
+
+    <CallTarget Targets="CreateEmptyUserFile" Condition="@(CurrentGitBranchTargetDatabase) == ''" />
+
+    <XmlPoke Condition="$(IsUserFileUpdateRequired) == 'True'"
+             Namespaces="$(ProjFileNameSpace)"
+             XmlInputPath="$(MSBuildProjectFullPath).user"
+             Query="$(TargetDatabaseBaseXPath)"
+             Value="$(GitBranchTargetDatabase)" />
+
+    <Touch Condition="$(IsUserFileUpdateRequired) == 'True'"
+         Files="$(MSBuildProjectFullPath)" />
+
+  </Target>
+  
+  <Target Name="CreateEmptyUserFile">
+    <ItemGroup>
+      <TestAssembly Include="$(MSBuildProjectFullPath).user" />
+      <Line Include="line01"><Text>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</Text></Line>
+      <Line Include="line02"><Text>&lt;Project ToolsVersion=&quot;14.0&quot; xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;&gt;</Text></Line>
+      <Line Include="line03"><Text>&lt;PropertyGroup&gt;</Text></Line>
+      <Line Include="line04"><Text>&lt;TargetDatabase/&gt;</Text></Line>
+      <Line Include="line05"><Text>&lt;/PropertyGroup&gt;</Text></Line>
+      <Line Include="line06"><Text>&lt;/Project&gt;</Text></Line>
+      <LineText Include="%(Line.Text)" />
+    </ItemGroup>
+    <WriteLinesToFile
+      File="$(MSBuildProjectFullPath).user"
+      Lines="@(LineText)"
+      Overwrite="true" />
+  </Target>  
+</Project>

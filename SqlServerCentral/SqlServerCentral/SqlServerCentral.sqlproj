@@ -408,4 +408,5 @@
   <ItemGroup>
     <None Include="Migrations\0003_20161116-0850_daner.sql" />
   </ItemGroup>
+  <Import Project="$(SolutionDir)\ReadyRoll.GitInfo.targets" />
 </Project>
