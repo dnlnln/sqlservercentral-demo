@@ -9,3 +9,5 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]
 --------------------------------------------------------------------------------------
 */
+PRINT 'myvariable: $(myvariable)';
+GO

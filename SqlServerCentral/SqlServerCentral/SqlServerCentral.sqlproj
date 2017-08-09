@@ -290,4 +290,10 @@
   <ItemGroup>
     <None Include="Migrations\1.1.0\0003_20160817-2335_daner.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="myvariable">
+      <DefaultValue>mydefault</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
 </Project>
