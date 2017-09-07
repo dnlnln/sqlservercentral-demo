@@ -6,12 +6,12 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-CREATE PROCEDURE [dbo].[AddStopWord] @Word NVARCHAR(50)
+CREATE PROCEDURE [dbo].[AddStopWord] @Word NVARCHAR(55)
 AS
 	BEGIN
 		INSERT INTO dbo.SearchAnalyzerConfig
 		        ( Word, [Group] )
-		VALUES  ( @Word, 0 )
+		VALUES  ( @Word, 1 )
 		
 		
 		SELECT @@ERROR AS 'atatError'
