@@ -10,7 +10,8 @@ CREATE TABLE [dbo].[EventLog]
 [StackTrace] [varchar] (max) NULL,
 [StackTraceHash] [int] NULL,
 [Headers] [nvarchar] (max) NULL,
-[UserID] [int] NULL
+[UserID] [int] NULL,
+[CreatedDate] [datetime2] NOT NULL CONSTRAINT [DF__EventLog__Create__16CE6296] DEFAULT (sysdatetime())
 )
 GO
 ALTER TABLE [dbo].[EventLog] ADD CONSTRAINT [PK_ErrorLog] PRIMARY KEY CLUSTERED  ([EventID])
