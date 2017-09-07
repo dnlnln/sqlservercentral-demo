@@ -42,3 +42,4 @@ TEMP_BUILD_FILE_DO_NOT_PROMOTE.cs
 OctoPack/source/Samples/.octopack/OctoPack.targets
 OctoPack/source/Samples/.octopack/OctoPack.Tasks.dll
 _NCrunch_ReadyRoll
+*.jfm
