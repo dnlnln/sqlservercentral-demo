@@ -40,7 +40,7 @@
     <DeployOnceUseSemver>True</DeployOnceUseSemver>
     <SemverInitialBaseline>True</SemverInitialBaseline>
     <DeployChangesForProgrammableObjects>True</DeployChangesForProgrammableObjects>
-    <GenerateOctopusNuPkg>True</GenerateOctopusNuPkg>
+    <GenerateOctopusNuPkg>False</GenerateOctopusNuPkg>
   </PropertyGroup>
   <!-- READYROLL OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
